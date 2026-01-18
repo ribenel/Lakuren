@@ -1,0 +1,50 @@
+/*preguntas frecuentes*/
+.body {
+	background-color: #000;
+	background-image: url(https://wallpapers.com/images/hd/enchanted-place-hollow-knight-g3nee24eb0fai1bd.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	height: 100vh;
+	background-attachment: fixed;
+}
+.contGral {
+	display: flex;
+}
+
+/*------------nav----------*/
+.navCont {
+	max-width: 20em;
+	height: 92vh;
+	margin: 20px;
+	border: 1px solid #00b5;
+	border-radius: 40px;
+	padding: 2em 0.5em;
+}
+.navImg {
+	width: 4.5em;
+	height: auto;
+	border-radius: 100%;
+  	display: block;
+ 	margin-left: auto;
+  	margin-right: auto;
+}
+.nav {
+	margin: 40px 5px;
+	margin-right: 40px;
+}
+.ulNav {
+}
+.liNav {
+	list-style-type: none;
+	display: list-item;
+	margin: 10px;
+}
+.aNav {
+	text-decoration: none;
+	color: #fff;
+}
+/*------------acor----------*/
+.contAcor {
+	max-width: 800px;
+}
