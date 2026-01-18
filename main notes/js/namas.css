@@ -1,0 +1,15 @@
+* {
+	background: #000;
+	color: #0f09;
+	text-decoration: none;
+	font-size: 13px;
+	font-family: courier new;
+	letter-spacing: -1px;
+	box-sizing: border-box;
+	margin: 1em;
+	padding: 0;
+	margin-top: 1rem;
+}
+* {
+	cursor: url(cc3.png), auto; /*me deja 100*/
+}

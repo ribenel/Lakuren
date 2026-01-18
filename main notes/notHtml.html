@@ -1,0 +1,249 @@
+notas de html:
+
+INDICE:
+
+@ ETIQUETAS PRINCIPALES (37)
+@ ETIQUETAS DE TEXTO (50)
+@ TEORIA DE CAJAS (62)
+@ ETIKETAS DE ENLACE (75)
+@ LISTAS (97)s
+@ IMAGENES, AUDIOS Y VIDEOS (112)
+@ DIVS (130)
+@ FORMULARIOS (136)
+@ METADATOS (115)
+@ CORRECTO ORDEN PERIODICO (168)
+@ TABLAS (191)  
+@ DATOS EXTRAS (209)
+-
+
+HTML o ipertext markup lenguage nos da la estructura basica y no visual, de una pagina
+
+los archivos nuevos deben guardarse con el formato index (solo la pagina principal) y ser guardada con el formato .html
+
+FORMATO= mp3(audio), mp4(video), jpg(imagen), png(otro formato de imagen), word, etc.
+
+En html se utilizan etiquetas para añadir objetos o "cajas", para estructurar. Cada una se habre con el simbolo < y se cierra con el simbolo />
+La mayoria de las etiquetas se habren asi: <cosa> y se cierran asi: <cosa/>
+Hay casos en los que la etiqueta no nesecita cerrarse como es el del <br> que se cierra automaticamente
+
+Las etiquetas pueden tener atributos y esos atributos pueden tener valores, por ej:
+<etiqueta atributo="valor"></etiqueta>
+<boton color="rojo"></boton>
+
+*los archivos html se habre con un navegador como chomer
+
+TIPOS DE ETIQUETAS:
+
+@ ETIQUETAS PRINCIPALES (importante):
+
+<!DOCTYPE html>
+es una de las primereas que se debe poner y sirve para indicar que es la ultima version de html
+
+<html>contiene toda la pagina, todas las configuraciones, datos y objetos relebantes</html>
+
+<head>contiene todo lo que no es visible en la pagina, como las configuraciones, el titulo de la pestaña, los meta, etc.</head>
+
+<body>contiene todo lo que es visible en la pagina</body>
+
+<title> (va en el head) y se usa para darle titulo a la pestaña de la pagina</title>
+
+@ ETIQUETAS DE TEXTO (basico):
+
+<h1>sirven para poner titulo, existen del h1 al h6 y no es recomendable poner mas de un h1 ni muchos h2 o h3, y a medida que los numeros acienden los tamaños decienden</h1>
+
+<p>parrafo</p>
+
+<b>negrita</b>
+
+<i>italica</i>
+
+<small>chiquita</small>
+
+@ TEORIA DE CAJAS (importante):
+
+las etiquetas pueden presentarse en dos formas: la etiqueta que completan una linea y las que se adaptan al contenido...
+un ejemplo de la primera son los <h1></h1> que en una caja ucupan un espacio comleto desde donde parten, mientra que los segundos tipos de etiquetas se adaptan al contenido asignado como los <b></b>
+|                     |
+|<h1>hola</h1........>|
+|                     |
+|                     |
+|<b>hola</b>          |
+|                     |
+
+<br>es una etiqueta que sirve para completar la linea
+
+@ ETIKETAS DE ENLACE (basico):
+
+para esto se usa una etiqueta que lleva un atributo obligatorio la cual es <a href=""></a>, dentro del href se coloca un enlace para guiarte/los a la pagina que decees, y para que sea visible este procedimiento se coloca dentro de la etiqueta la forma en la que quieres que alguien ingrese a la pagina, por ej:
+<a href="#">clik aqui para ingresar</a>
+
+(el # guia a una pagina aleatoria)
+
+para poner el link tenemos 3 opciones de ruta:
+
+*ruta externa: de una pagina o archivo ageno como por ejemplo facebook.com con la que no estemos enlasados, para esto se unsa un procedimiento que se llama https://, por ejemplo: https://facebook.com
+
+*ruta local: de una pagina o archivo que se encuentre en nuestro servidor, para esto ponemos el nombre de archivo (de preferencia que se encuentre en la misma carpeta), de nuestro servidor, al que queremos acceder con el formato que lo guardamos.
+...en el caso de que no se encuentren en la misma carpeta se le coloca: elnombredelacarpeta/y nombre del archivo al que quieras acceder
+por ej: <a href="carpetaexterna/index.html">clik aqui</a>
+...en el caso de que querramos volver a la carpeta anterios colocamos elnombredelacarpeta/y nombre del archivo del que quieras volver
+por ej: <a href="../index.html">clik aqui</a>
+
+*copiar y pegar: cada que realizas una busqueda e ingresas a un sitio, en la barra superior aparece un link, si queres accerder a el copia y pega en el href
+
+los enlaces pueden habrirnos en una ventana aparte y que al accerder el usuario pierda nuestra pagina al ingresar en el enlace... para evitar esto se puede agregar un atributo extra el cual se denomina: target="" a este se le agrega el valor _BLANK para que funcione
+por ej: <a href="#" target="_BLANK">clik aqui</a>
+
+@ LISTAS (basico):
+
+existen las listas:
+
+desordenada: <ul>con puntos</ul> (mas usadas)
+
+ordenadas: <ol>con numeros</ol>
+
+ adentro de estos se colocan los <li>que son los elementos de la lista</li> por ej:
+ <ul>
+ 	<li>carne</li>
+ 	<li>papas</li>
+ 	<li>leche</li>
+ </ul>
+
+@ IMAGENES, AUDIOS Y VIDEOS (basico):
+
+para imagenes se usa:
+<img src="un link de una imagen descargada o copiado de google.png o jpg" alt="lll" title="un titulo que aparece al pasar el maus por la imagen"> .png es el formato de la imagen en que debemos guardar la imagen si es que la descargamos
+formatos de imagen:JPG, PNG, GIF, TIFF, PSD, BMP, etc. hay un elemento que es relevante para el ceo el cual es el atributo alt que en caso de no precentarse la imagen te aparece un rastro de esta
+
+para videos el procedimiento es el mismo pero la etiqueta y el formato son diferentes:
+<video src="#.mp4"></video>
+formatos de video existentes:MP4, MOV, WMV, AVI, OGG, etc. el mas recomendable es el mp3. A este se le agrega el atributo controls que le permite al usuario acceder a los controles del video.  utiliza <source src="patodance.mp4" type="video/mp4">
+
+para audio se usa el mismo tipo de etiqueta que de video y el mismo procedimiento, lo unico que cambia es el formato: mp3, pcm, aac, ogg, flac, etc.
+<audio src="#" controls>audio</audio>
+
+tamaños y medidas (relevante en css):
+
+width(ancho) y heigt(largo) son dos atributos que nos sirven para proporcionar medidas en px
+
+@ DIVS (relevante para css):
+
+<div>separa y agrupa elementos o contenido</div>
+
+cemanticamente... nivel estructural
+
+@ FORMULARIOS (basico):
+
+se utiliza la etiqueta <form>formulario</form> y en su interior la etiqueta <input type="tipo de imput" name="valor del imput">
+
+teorico: imput(entrada de datos), procesamiento y omput(respuesta)
+los imput sirven para pedirle datos al usuario, hay diferentes tipos de imput:
+<input type="text" name=""> de texto
+<input type="pasword" name=""> contraseña
+<input type="number" name=""> numero
+<input type="email" name=""> imeil
+<input type="color" name=""> color
+<input type="range" name="" min="1" max="10"> permite elegir entre numeros de menor a mayor aplicandole los valores min. y max.
+<input type="date" name="">  fecha
+<input type="buttom" value="boton"> sirve para poner un boton y la propìedad value nos permite nombrarlo, por ejemplo "enviar"
+<input type="submit" name=""> para enviar, tambien se les puede dar value
+hay un atributo que se les puede agregar a todos para que el completar los datos sea obligatorio, este atributo se llama required y no es recomendable su uso en html
+hay un atributo en el form que determina el metodo de emvio de los imputs y sen escribe method="post".
+hay otro cemi input que es el <textarea readonly="">es un texto al cual el usuario puede darle resoluciones a voluntad y en el que uede escribir, a este se le puede agregar el atributo readonly el cual hace que el usuario unicamente pueda leerlo, aunque sigue con la posivilidad de modificar el tamaño</textarea>
+
+@ METADATOS (codificacion):
+
+los metadatos se ubican en el head y son un tipo de configuracion que recibe la pagina para controlar cosas como las busuquedas del cervidor relacionadas con nuestra pagina, etc.
+para esto usamos la etiqueta <meta ...>
+hay diferentes tipos de metadatos:
+<meta charset="utf-8"> sirve para que el navegador reconosca y permita los caracteres especiales que no puede leer como tal
+<meta name="es el tipo de meta" content="contenido">
+<meta name="keywords" content="galletas, pan, mermeladas"> palabras clave relacionadas con la pagina, que son buscadas por el navegador a la hora de presentar paginas
+<meta name="description" content="la descripcion de la pagina"> de que trata la pagina
+<meta name="author" content="carlos vallanueva, etc"> creador de la pagina
+<meta name="copyright" content="empresa..."> si es de una empresa y cual es
+<meta name="robots" content=""> es si esta ono indexada la pagina, si esta indexada o puesta en un indice, se puede poner index o noindex le ponemos que no aparesca como sugerencia en el buscador, se usa para paginas ocultas en su mayoria
+
+@ CORRECTO ORDEN PERIODICO (importante):
+
+partes que componen la pagina...
+<header (encabezado/precentacion de la pagina)
+ nav (navegador/realizar busquedas y acceder al resto del contenido, va dentro del header)
+  article (articulo/ lleva el contenido)
+   section (secciones dentro del articulo)
+    aside (barra lateral, que va al costado)
+     footer (pie de pagina, informacion extra, Copyright)>
+
+nota: Copyright=derechos de autor
+
+estructura del nav:
+<header>
+	<nav>
+		<ul>
+			<li><a href="#">inicio</a></li>
+			<li><a href="#">pagina 1</a></li>
+			<li><a href="#">pagina 2</a></li>
+		</ul>
+	</nav>
+</header>
+
+@ TABLAS (relevante):
+
+son tablas con columnas(td, vertical) y filas(tr,horizontal), usan la siguente etiqueta
+<table>
+	<td>
+		<td>cosa</td>
+		<td>cosa</td>
+		<td>cosa</td>
+		<td>cosa</td>
+	</td>
+	<td>
+		<td>otras cosas</td>
+		<td>otras cosas</td>
+		<td>otras cosas</td>
+		<td>otras cosas</td>
+	</td>
+</table>
+
+@ DATOS EXTRAS (utiles):
+
+**hay una etiqueta que se usa mas seguido en css que en html, de echo no se recomienda usarla en html, la cual es <center>sirve para centrar texto o elementos</center>
+**para  crear un acceso a alguna parte de la pagina sin tener que usar el scrol debemos crear un <a href="#codigo">parte baja</a> y darle un id a algun elemento <h2 id="codigo">el codigo es 46740861</h2> (no se recomienda su uso en cosas simples ni mas de una vez)
+**iconos de pestaña y pagina: en el head se coloca lo siguiente...
+<link rel="icon" href="enlace del archivo.ico"> se le coloca el formato ico de forma obligatoria
+**ver video de errores comunes en html
+
+**div>.column*2>.box*1 (estudialo en vscode)
+
+**podemos poner mas de una clase / class:"container footer"
+
+	``container seria la clase general y el footer seria la segunda clase para especificar a profundidad sus caracteristicas si es necesario
+
+
+______________________________________¶¶__________
+___________________________________¶1_¶1¶1________
+__________________________________1¶¶¶__1¶¶_______
+__________________________________¶1_¶____1¶¶1____
+__________________________________¶¶_________1¶___
+__________________________________¶¶_________¶¶11_
+________________________1¶¶11111__1¶__¶_____11_1¶_
+___________________1¶¶¶¶111¶¶11¶¶¶¶¶¶1¶¶__1___1¶11
+_________________1¶1__1¶___1¶________¶¶¶¶¶¶_____1¶
+_______________1¶1_____¶1___1¶_________¶1_____¶¶__
+______________¶¶¶_______¶____¶¶________1¶___11¶¶__
+_____________¶¶_1¶______1¶____¶¶_______¶¶11¶11____
+____________¶¶¶__¶1______1¶____¶¶______¶¶_________
+____________¶_¶1__¶1______1¶____¶¶_____1¶_________
+___________1¶_1¶__1¶________¶1___1¶1___1¶_________
+___________1¶__¶¶__1¶________¶¶____¶¶__1¶_________
+____________¶___¶¶__1¶1_______¶¶_____1¶¶1_________
+_________111¶1___¶¶___¶1_______1¶¶____¶¶__________
+___¶¶¶¶¶¶11¶1_____¶¶___¶¶________1¶1¶¶¶___________
+1¶¶¶_____11¶1______1¶1__1¶1________¶¶_____________
+_1¶¶1___1¶¶¶¶1_______¶1___¶¶____1¶¶1______________
+___1¶¶_____¶¶¶¶¶¶¶11__1¶1__1¶¶¶¶¶1________________
+____¶¶_____1¶__1¶_1¶¶¶1¶¶¶¶¶111___________________
+____1¶__________¶_________________________________
+_____1¶1______¶¶¶_________________________________
+_______¶¶¶11_1¶___________________________________
+__________¶¶11____________________________________	

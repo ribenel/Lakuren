@@ -1,0 +1,56 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+<style>  
+.contenedor {  
+  display: grid;  
+  grid-template-columns: repeat(3, 1fr);  
+  grid-template-rows: auto auto auto;  
+  grid-template-areas:  
+    "header header header"  
+    "sidebar content content"  
+    "footer footer footer";  
+  gap: 10px; /* Espacio entre las celdas */  
+  padding: 10px;  
+  background-color: #2196F3;  
+}  
+
+.contenedor > div {  
+  background-color: rgba(255, 255, 255, 0.8);  
+  text-align: center;  
+  padding: 20px 0;  
+  font-size: 30px;  
+}  
+
+.header {  
+  grid-area: header;  
+  background-color: lightblue;  
+}  
+
+.sidebar {  
+  grid-area: sidebar;  
+  background-color: lightgreen;  
+}  
+
+.content {  
+  grid-area: content;  
+  background-color: lightcoral;  
+}  
+
+.footer {  
+  grid-area: footer;  
+  background-color: lightgray;  
+}  
+</style>  
+</head>  
+<body>  
+
+<div class="contenedor">  
+  <div class="header">Header</div>  
+  <div class="sidebar">Sidebar</div>  
+  <div class="content">Content</div>  
+  <div class="footer">Footer</div>  
+</div>  
+
+</body>  
+</html>  

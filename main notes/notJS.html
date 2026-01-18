@@ -1,0 +1,1116 @@
+<!--  javascript Junior - versiones 7, 8, 9  -->
+<!-- notas: -->
+
+INDICE:
+
+--)¿que es JavaScript?
+
+--) Enlazar
+--)
+--)
+--)
+--)
+--)
+--)
+--)
+
+
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<</> ¿QUE ES JAVASCRIPT?
+
+
+- Es un lenguaje interpretado porque no tiene que ser pasado por un compilador sino que se ejecuta directamente en el navegador mediante el "Interprete".
+
+- Es un lenguaje imperativo (va linea por linea).
+
+- Es sensible a mayusculas y a minusculas (Keys Sensitive)
+
+- Es un lenguaje basado en prototipos (ya creados)
+
+- Es de tipado devil (el valor de las variables va cambiando)
+
+- Es dinamico (los datos se ajustan a las varibles)
+
+- Esta construido sobre ECMAScript
+
+- Tiene varias versiones con funcionalidades diferentes
+
+
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<</> ENLAZAR JavaScript
+
+
+- En linea (onclik, ...) --> no recomendable
+
+- enlazando con la etiketa <script type="text/javascript"></script> no tan recomendable
+
+- como contenido en un archivo de formato js --> mas recomendable
+<body>
+	<script src="nimbre del archivo.js"></script>
+</body>
+
+- con un require... nsdexjs
+
+
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<</> VARIABLES
+
+
+++ VARIABLES --> Una varible es un espacio que guardamos en la memoria del programa para usarlo devuelta
+
+<!-- 
+Para crear una variable solo debes crear un elemento y guardar un dato en ese elemento
+-->
+
+pej: recipiente = "papel";  --> elemento = "dato";
+	 alert(recipiente) 		--> da una alerta en la pagina
+
+
+++ TIPOS DE DATOS: String (cadena de texto), Numbre, Boolean, symbol(no es un dato primitivo).
+
+<!--
+solo vamos a ver: 
+*String
+*Numbrer
+*Booleano
+-->
+
+- un String es un cadena de texto --> hat tres formas de escribirlas ("", '', etc)
+
+string = "cadena de texto" --> es una cadena de texto porque todos los caracteres estan unidos
+
+- number es un numero = 1 si tubiera las comillas seria texto "1"
+
+- los valores booleanos son solo dos: true y false que significan unos y ceros
+
+string = "texto" --> con comillas
+number = 13 --> sin comillas
+booleano = true --> o false
+
+
+++ CASOS ESPECIALES DE DATOS: undefined, null, nan; --> hablan de que la variable no estan definidas o hay un herror.
+
+** las varibles se pueden declarar, modificar e inicializar a lo largo del tiempo, esto se puede hacer con var, let y const <!--sirven para inicializar una variable-->
+
+-- let tiene menos alcanze o se limita al bloque y var es de alcance global
+
+let unnumero; --> asi la declaramos (poniendole un nombre a la variable)
+unnumero = 15; --> asi la inicializamos (dandole un valor a ese nombre)
+alert(numero) --> asi se presenta en pantalla
+
+**tambien podemos declararla e inicializarla en la misma linea:
+let numero = 12;
+
+-- const = una constante --> una vez definido su valor no se puede redefinir
+
+const pi = 3.14
+
+**se tiene que declarar e inicializarla en la misma linea o al mismo tiempo, a diferencia de let:
+
+const numero = 15;  bien :D
+const numero; numero = 15;  mal :v 
+
+
+__ Para inicializar una variable debemos declararla, darle un nombre y un valor:
+
+let numero; --> declaracion y nombre
+
+numero = 15; --> valor
+
+alert(numero); --> orden
+
+
+__ Podemos declarar mas de una variable a la vez:
+
+let num, nume, numer, numero;
+
+num = 10;
+nume = 9;
+numer = 8;
+numero = 7; 
+
+alert(num);
+alert(nume);
+alert(numer);
+alert(numero);
+
+tambien: let numero = 12, numero2 = 20; --> poniendo solo una coma
+
+
+- UNDEFINED: undefined indica que la variable no esta definida
+
+let numero = undefined;  --> no definida
+
+- NULL: indica que esta definida a pesar de no tener un valor o que su valor sea nulo 
+
+let numero = null; --> vacia (._.)
+
+- NAN: es una aviso que indica que la operacion no tiene numero (que por defecto deberia tener)
+
+NaN --> valor que podemos obtener cuando hacemos operaciones que no son con numeros, deberian ser con numeros, pero por alguna razor pusiste texto o cualquier otrs cosa:
+
+NOT AT NUMBER o NaN
+
+let num = 2; 
+let num2 = 3;
+alert(num * num2);  --> esto me da 6
+
+let num = 2;
+let num2 = "texto";
+
+alert(num * num2); --> no me da 6, ni 2Texto, solo pone NaN, porque no sabes multiplicar numeros reales
+
+
+++ Un ejemplo de lo que podemos hacer con prompt() y alert() --> operadores
+
+prompt("hola bb") 
+
+*A diferencia de alert, te abre otra pequeña VENTANA pero esta te PIDE una RESPUESTA, la respuesta que le des puede ser GUARDADA pero eso es USANDO las VARIABLES
+
+let n = prompt("dime como quieres que te diga :3") --> en la variable n se gusrado ese apodo o la mugre de nombre que le ayas puesto
+
+alert("hola" + n) --> aca convinas texto sumado a ese apodo de rarito
+
+para que el lo que ayas puesto no se pegue al texto, debes poner un espacio para separar el texto dentro de las comillas:
+
+let num = prompt("pon tu nombre amor :D");
+alert("hola " + num) --> en "hola " hay espacio
+
+- esto permite que el usuario igrese un dato y en base a eso se comunique con el reseptor usando ese dato, en este caso es el nombre...
+
+let num = prompt("pon tu nombre amor :D");
+alert("como que " + num + "?");
+
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<</> OPERADORES
+
+
+++ De ASIGNACION y ARITMETICOS:
+
+
+
+-** OPERADORES DE ASIGNACION --> Asignan un valor al operando de la  izquierda basado en el valor del operando de la derecha
+
+- Es basicamente esto:
+
+nombre			abreviaciones 		lo que significa
+
+ASIGNACION 		X = Y 				X = Y 				
+																													
+ASIGNACION
+de adiccion		X += Y 				X = X + Y
+															
+ASIGNACION
+de sustraccion 	X -= Y 				X = X - Y	
+
+ASIGNACION de 
+multiplicacion  X *= Y 				X = X * Y	
+
+ASIGNACION
+de division  	X /= Y 				X = X / Y
+
+ASIGNACION
+de resto 	 	X %= Y 				X = X % Y
+
+ASIGNACION de
+exponenciacion 	X **= Y 			X = X ** Y
+
+
+
+- PARA QUE ENTIENDAS MEJOR:
+
+let num = 15;
+
+num += 5; --> con operadores me da 20 
+num = 15 + 5; --> sin operadores me da 20
+
+**porque  X += Y es igual a X = X + Y
+
+document.write(num) --> como aert pero en lugar de dar una alerta lo muestra como texto
+
+
+- X es el primer numero y Y es el segundo numero
+
+- Son diferentes asignaciones donde SUMA, RESTA, MULTIPLICACION y DIVISION son las mismas de siempre pero...
+
+- En la ASIGNACION DE RESTO el operador % calcula el resto de una división entera, y %= combina esta operación con la asignación. Por ejemplo, 10 % 3 daría como resultado 1, porque 3 cabe 3 veces en 10, y sobra 1. 
+
+**Me da lo que sobre, se trata de una division donde te indica los numero que sobran despues de haber probado cuantas veces cave numero1 en numero2:
+
+let num = 10;
+num %= 5; --> entonces el resto es 0 porque 5 cave dos veces en 10 y no sobra nada
+
+let num = 10;
+num %= 6; --> entonces el resto es 4 porque 6 cave una vez en 10 y sobra 4
+
+**Tampoco te da numeros con coma, los redondea a entero directamente, exepto que la coma la tenga en valor de num: let num = 10.24445; en este caso si te calcula las comas :D
+
+- En la ASIGNACION DE EXPONENCIACION le estamos asignado un exponente al numero. por ejemplo: si le pusieramos en X el numero 10 y en Y el numero 2 seria algo asi 10^2=100
+
+**en resumen te eleva el valor de num por el numero de operador que en el ejemplo es 3:
+
+let num = 10;
+num **= 3;
+document.write(num);
+
+- Existen mas operadores de asignacion pero son complejos y se usan para situaciones especificas por lo que seran relevantes el dia que se te de por usarlos.
+
+
+
+-** OPERADORES ARITMETICOS --> "Toman valores numericos (ya sean literales o variables) como sus operandos y retornan un valor numerico unico"
+
+																						
+								i					f								
+								n				c	i					s			
+								t			a	h	r	o				a			
+								e			n	r	e	p				m			
+								r 			d	o	f	e		s 		s			
+								n			r	m	o	r		a		u
+								e			o	e	x	a		f		n			
+								t			i					a		g			
+											d	p.	p.	p.		r					
+								e								i		i			
+							f	x			w	a	a	a				n		n	
+					c		i	p		s	e	n	n	n		e		t		o	
+					h		r	l	o	a	b	d	d	d		n		e		d	
+					r	e	e	o	p	f	v	r	r	r				r		e	
+					o	d	f	r	e	a	i	o	o	o		I		n		.	
+					m	g	o	e	r	r	e	i	i	i		O		e		j	
+					e	e	x	r	a	i	w	d	d	d		S		t		s	
+																					
+																				
+Adittion (+)		1	12	1	3	3	1	1	18	4	10.1	1		1.0		0.1.100																							
+Decrement(--)		2	12	1	3	3	4	1	18	4	10.1	3.2		1.0		0.1.100																			
+Division(/)			1	12	1	3	3	1	1	18	4	10.1	1		1.0		0.1.100																					
+Exponentiation(**)	52	14	52	no	39 10.1	51	52	52	41		10.3	6.0		7.0.0																						
+Increment(++)		2	12	1	3	3	4	1	18	4	10.1	3.2		1.0		0.1.100																				
+Multiplicacion(*)	1	12	1	3	3	1	1	18	4	10.1	1		1.0		0.1.100																							
+Remainder(%)		1	12	1	3	3	1	1	18	4	10.1	1		1.0		0.1.100																							
+Subtraction(-)		1	12	1	3	3	1	1	18	4	10.1	1		1.0		0.1.100																							
+Unary negation(-)	1	12	1	3	3	1	1	18	4	10.1	1		1.0		0.1.100																							
+Unary plus(+)		1	12	1	3	4	1	1	18	4	10.1	1		1.0		0.1.100		
+
+
+**hay operadores que para usarlos solo tenemos que poner el numero y el signo y hay otros a los que hay que ir acompañandolos de un signo:																				
+num1 = 2;
+num2 = 5;
+resultado = num1 + num2; --> en el operador de suma o dicion necesitamos 2 numeros
+alert(resultado);
+
+
+num1 = 2;
+num1--; --> en el de decremento podemos poner solo el -- y con eso restamos 1
+alert(num1);
+
+**el orden es correctamente funcional porque primero asigne una variable, luego reste y por ultimo di la orden de mostrarlo y es por esa misma razon que en ejemplo anterior no habria funcionado solo poner resultado = num1--
+
+num1 = 2;
+<!-- resultado = num1--; --> no funcionaria 
+num--;  --> por lo que primero tenemos que restarlo
+resultado = num; --> luego definirlo y por ultimo ejecutarlo
+
+alert(resultado);
+
+
+num1 = 2;
+num2 = 5;
+res = num1 / num2; --> en el de division tenemos que poner ambos numeros
+alert(res);
+
+
+num1 = 2;
+res = num1**4; --> en el de exponencializacion lo hace al cuadrado
+alert(res);
+
+
+num1 = 2;
+num1++; --> el de incremento requiere de un solo numero
+res = num1; 
+alert(res);
+
+
+num1 = 2;
+num2 = 5;
+res = num1&num2; --> el reminder 0 resto tambien requiere de dos numeros
+alert(res);
+
+
+num1 = 2;
+res = -num1; --> en la negacion unaria solo necesita un nº y te da el negativo de ese nº
+alert(res);
+
+...los datos pueden ser primitivos(que vienen junto a la lenguaje) o no primitivos(construidos en base a otros datos)
+
+- Los operadores aritmeticos funcionan de la siguiente manera:
+
+	A los numeros definidos podemos cambiarle su valor mediante simbolos y luego ejecutarlos (el orden es importante) asi como el -- tambien se puede usar el ++ y el ** que eleva los numeros pero siempre con el exponente al lado n1**5 = 100000; estos solo requieren un numero pero hay otros que requieren mas de uno (n1, n2).
+
+	Los que requieren de mas de un valor son el remeinder & (resto), substraccion - (resta directamente), de negacion unaria - (negativo/ -n1 = -10), etc...
+
+
+<!--.....alert("hola")-> es una funcion de javascript. Cuando se llama a alert() con un argumento, ese argumento se convierte a una cadena de texto y se muestra dentro del cuadro de diálogo emergente.-->
+
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<</> CONCATENACION
+
+
+-** Concatenar consiste en unir strings (unir cadenas ya sea textuales, numericas o una mezcla de ambas)
+
+saludo = "hola amoor :D ";
+pregunta = "¿como estas?";
+
+frase = saludo + pregunta;
+
+alert(frase);
+
+
+-**En el caso que quisieramos concatenar texto y sumar numero a la vez cuando el string detecte el texto "" convierte todo en una cadena de texto (en lugar de sumar numeros pone uno al lado del otro), esto puede ser detectado como conacatenacion forsada
+
+num1 = 10;
+num2 = 20;
+
+frase = "hola" + num1 + num2; --> en lugar de mostrar 30 muestra 1020
+document.write(frase);
+
+**para que no te pase puedes ponerle "" a los numeros o concatenarlos:
+
+num1 = "10";
+num2 = 20;
+frase = num1.concat(num2); --> una de las manera es usando .concat() el cual necesita que el valor al cual esta unido por . en este caso num1. sea un string, de lo contrarion va a mostrar un error, esa es una manera de concatenar
+
+-** Otra forma (mas conveniente) de concatenar puede ser utilisando los bacfits `` y con las llaves ${} de la siguiente manera:
+
+	n = "pablo";
+
+	f = `hola ${pablo}`;
+
+nombre = "cosa";
+frase = "si esta " + nombre + " me dice algo lo mato" ; --> una forma opcional
+
+nombre = "cosa";
+frase = `si esta ${nombre}  me dice algo lo mato`; --> y con bacfits 
+document.write(frase);
+
+
+**lo que hace el bacfit es permitirte usar os otros tipos de comillas dentro de la concatenacion, ya sean dobles " " o simples ' '
+
+**y tambien aplica con cidigo html:
+
+frase = `<div><p>hola amo</p></div>`;
+document.write(frase);
+
+
+_**Escape de COMILLAS SIMPLES y COMILLAS DOBLES:
+
+*en una frase de comillas dobles, podemos hacer que la comillas simples parezcan en el texto: 
+
+frase = "hola 'amor', ¿como estas?";
+document.write(frase);
+
+*pero si en la misma frade intentamos poner las comillas dobles va asaltar error:
+
+frase = "hola "amor", ¿como estas?"; --> gracias a que al finalizar las comillas dobles se esta cerrando la cadena 
+
+*para que esto funcione, por fuera se usan comillas simples por fuera y comillas dobles por dentro:
+
+frase = 'hola "amor", ¿como estas?';
+document.write(frase);
+
+*aplica igual para los backfits:
+
+frase = 'hola `amor`, ¿como estas?'; --> funciona
+
+frase = `hola `amor`, ¿como estas?`; --> no funciona
+
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<</> OPERADORES INTERMEDIOS 
+
+
+-**OPERADORES DE COMPARACION: comparan dos expresiones y devuelven un valor boolean (true o false) que reprecenta la relacion de sus valores.
+
+<!-- 																						
+								i					f								
+								n				c	i					s			
+								t			a	h	r	o				a			
+								e			n	r	e	p				m			
+								r 			d	o	f	e		s 		s			
+								n			r	m	o	r		a		u
+								e			o	e	x	a		f		n			
+								t			i					a		g			
+											d	p.	p.	p.		r					
+								e								i		i			
+							f	x			w	a	a	a				n		n	
+					c		i	p		s	e	n	n	n		e		t		o	
+					h		r	l	o	a	b	d	d	d		n		e		d	
+					r	e	e	o	p	f	v	r	r	r				r		e	
+					o	d	f	r	e	a	i	o	o	o		I		n		.	
+					m	g	o	e	r	r	e	i	i	i		O		e		j	
+					e	e	x	r	a	i	w	d	d	d		S		t		s	
+																					
+																				
+Ecuallity(a==b)		1	12	1	3	3	1	1	18	4	10.1	1		1.0		0.1.100																							
+Inecuallity(a!=b)	1	12	1	3	3	1	1	18	4	10.1	1		1.0		0.1.100																			
+Identitly(a===b)	1	12	1	4	4	1	1	18	4	10.1	1		1.0		0.1.100																					
+Non-identitly(a!==b)1	12	1	4	4 	1	1	18	4	10.1	1		1.0		0.1.100																						
+greater than (a>b)	1	12	1	3	3	4	1	18	4	10.1	1		1.0		0.1.100																				
+greater than or 	1	12	1	3	3	1	1	18	4	10.1	1		1.0		0.1.100		   ecual (a>=b)																				
+less than(a<b)		1	12	1	3	3	1	1	18	4	10.1	1		1.0		0.1.100																							
+less than or ecual	1	12	1	3	3	1	1	18	4	10.1	1		1.0		0.1.100				(a<=b) 
+-->																		
+
+
+*comparan dos valores, y si la reacion entre esos dos alores es verdadera te da true y si es falsa te muestra false
+
+let num = 12;
+let num2 = 15;
+document.write(num == num2); --> te tira false porque 12 no es igual a 15
+
+<!-- 
+usamos == ya que el = solo asigna valores, no compara, si quieres comparar usas == 
+-->
+
+let num = 12;
+let num2 = 12;
+document.write(num == num2); --> te tira verdadero porque 12 es igual a 12
+
+
+*el comparador OPUESTO (que te indica que son distintos) es != 
+
+let num = 12;
+let num2 = 15;
+document.write(num != num2); --> 12 es diferente de 15
+
+let text = "text uno"
+let text2 = "frase"
+document.write(text != text2); --> texto uno es diferente de frase
+
+*el COMPARADOR ESTRICTO === a diferencia del comparador no tan estricto que estaria siendo == , revisa que no solo se trate del mismo numero, sino que del mismo tipo de dato:
+
+let num = 12;
+let num2 = "12";
+document.write(num === num2); --> te salta false por el === pero si se tratara de == te salta true, y aque 12 es igual a 12, pero 12 numero no es igual a doce "texto" 12/"12", para que te salte true debe ser el mismo tipo de dato y el mismo valor
+
+*lo mismo aplica para Non-identitly(a!==b) si es estrictamente igual te tira falso pero s es estrictamente diferente te tira true
+
+*el OPERDOR DE EQUIDAD greater than (a>b) te da true cuando a es mayor que b
+
+let num = 10;
+let num2 = 10;
+res = num > num2; 
+document.write(res);
+
+*y less than(a<b) te tira tru si b es mayor que a y false si a es mayor que b         >
+
+*greater than or ecual (a>=b) y lees than or ecual (a<=b) te preguntan si el numero es mayor/menor y si es igual
+
+let num = 10;
+let num2 = 10;
+res = num <= num2; --> te salta true porque 10 es igual que 10 
+document.write(res);
+
+
+
+-**OPERADORES LOGICOS: Nos devuelven un resultado a partir de que se cumpla (o no) una condicion, su resultado es booleano, y sus opendos son valores logicos o asimilables a ellos.
+
+
+operador			uso				...
+
+AND (&&) LOGICO		expr1 && expr2	Regresa expr1 si tal puede convertirse a false de lo									contrario, regresa expr2. De esta forma, cuando se 										usan valores booleanos, && regresa true si ambos 										operadores son verdaderos, regresa flase.													
+OR (||) LOGICO		expr1 || expr2	Regresa expr1 si tal ùede convertirse a true; de lo 									contrario regresa a expr2. De esta forma coando se 										usa con valores booleanos, || regresa true si 											cualquier operando es verdadero; pero si ambos son 										falsos, regresa false.		
+
+NOT (!) LOGICO		!expr			Regresa flase, si su unico operando puede 												convertirse en true; de lo contrario, regresa true.
+
+
+let res = val && val2;
+
+let res2 = val || val2;
+
+let res3 = !val;
+
+
+
+*solo aceptan valores voleanos
+
+
+let val = true;
+let val2 = true;
+
+let res = val && val2; --> muestra true 
+
+**si las dos condiciones se cumplen (true y true) muestra true, si una de las condiciones no se cumple (false y true) entonces muestra false:
+
+let val1 = 10
+let val2 = 5
+
+res1 = val1 > val2
+res2 = val1 = val2 
+
+document.write(res1 && res2); --> da flase, porque 10 es mayor que 5 pero 5 no es igual a 10, si una de las dos condiciones no se cumple o es falsa, te va a saltar false.
+
+
+
+**si alguna de las condiciones se cumplen (true y true/true o false) muestra true, si ninguna de las condiciones no se cumple (false y false) entonces muestra false:
+
+let val1 = 15
+let val2 = 10
+
+res1 = val1 > val2
+res2 = val1 = val2 
+
+document.write(res1 || res2); --> da true, porque 15 es mayor que 5 aunque 15 no sea igual a 10, si una de las dos condicionesno  se cumple o es falsa y la otra si se cumple, te va a saltar true, si ambas se cumple o son verdadera te va a saltar true y si ninguna se cumple o es verdades entronces te va a saltar false.
+
+
+let val = true;
+let val2 = true;
+
+let res2 = val || val2; --> muestra true
+
+
+
+**si alguna de la condicion no se cumplen (false) muestra true, si no se cumple la condicion (false) entonces muestra true:
+
+document.write(!false); --> muestra true 
+
+**muestra el resultado contrario
+
+let res3 = !val; --> muestra false
+
+.....................................................
+
+val1 = 12;
+val2 = 24;
+val3 = 35;
+val4 = 12;
+val5 = 53;
+
+resp = (val5 > val2 || val1 < val4) && (!(val3 != val1) || val4 != val2);
+
+alert(resp);
+document.write(res);
+
+.....................................................
+
+
+**_CAMEL CASE: es la sensibilidad a las mayusculas 
+
+divConCamellCase --> es la forma de trabajar con JavaScript
+
+
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<</> CONDICIONALES
+
+**Sentencia que nos permite validar algo, permite a un bloque ejcuatrse, solo si una condicion se cumple
+
+if (true) {
+	alert("hola"); --> bloque, true, dice hola
+}
+
+if (false) {
+	alert("amor"); --> bloque, fals, no dise nada
+}
+
+if (26 > 24) {
+	alert("hola");
+}
+if (24 != 14) {
+	alert("amor");
+}
+
+-----------
+
+peso = 2400
+
+--> si la condicion se cumple, se ejecuta:
+if (peso == 24 ) {
+	alert("estabilidad economica ya que tienes mas de " + peso + "$"); 
+}
+
+--> si la primera condicion no se cumple, se ejecuta otra:
+else if (peso == 240 ) {
+	alert("estas en bancarrota ya que no tienes " + peso + "$");
+}
+
+--> si la primera y la segunda condicion no se cumple, el plan de contingencia es decir:
+else {
+	alert("no has informado sobre tus ingresos");
+}
+
+
+
+**los IF : son ilimitados
+
+pero no es recomendable ya que desperdicia recursos
+
+**los ELSE IF : son ilimitados
+
+**los ELSE : solo se puede poner uno
+
+
+
+nombre = "pedro2";
+
+if (nombre == "carlos") {
+	alert("hola " + nombre + " ¿como estas?");
+}
+else if (nombre == "pedro") {
+	alert("hola " + nombre + " te voy a llamar carlos");
+}
+else {
+	alert("no estas registrado");
+}
+
+
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<</> PRIMER EJERCICIO
+
+
+Tres chicos quieren comparar el helado mas caro que su dinero pueda comparar, pero los 
+precios no estan junto a cada tipo de helado.Tres
+
+Caren tiene $15
+Jonh tiene $145
+Tailer tiene $1000
+
+helado de agua: $5
+helado de crema de mani: $20
+helado de fresa: $130
+helado de vodka: $350
+un kilo de helado: 900
+helado de arandanos con polbo de oro: 900
+
+- pedirles que ingresen el monto y mostrarles el helado que deben comparar
+- si hay 2 o mas con el mismo precio, mostrar ambos
+- mostrar el vuelto
+
+dinCaren = prompt("¿cuanto dinero tenes Caren?");
+dinCaren = parseInt(dinCaren);
+
+if (dinCaren >= 5 && dinCaren < 20) {
+	alert("Caren deberia comparse el helado de agua");
+	alert("Te sobrarian " + (dinCaren - 5));
+}
+else if (dinCaren >= 20 && dinCaren < 130) {
+	alert("Caren deberia comparse el helado de crema de mani :)");
+	alert("Te sobrarian " + (dinCaren - 20));
+}
+else if (dinCaren >= 130 && dinCaren < 350) {
+	alert("Caren deberia comparse el helado de fresa :D");
+	alert("Te sobrarian " + (dinCaren - 130));
+}
+else if (dinCaren >= 350 && dinCaren < 900) {
+	alert("Caren deberia comparse el helado de vodka :D");
+	alert("Te sobrarian " + (dinCaren - 350));
+}
+else if (dinCaren >= 900 && dinCaren < 1000) {
+	alert("Caren deberia comparse el helado arandanos con polvo de oro o un kilo de helado");
+	alert("Te sobrarian " + (dinCaren - 900));
+}
+else {
+	alert("Caren, no jodas, sino viniste con plata largate de aca");
+}
+
+
+dinJonh = prompt("¿cuanto dinero tenes Jonh?");
+dinJonh = parseInt(dinJonh);
+
+if (dinJonh >= 5 && dinJonh < 20) {
+	alert("Jonh deberia comparse el helado de agua");
+	alert("Te sobrarian " + (dinJonh - 5));
+}
+else if (dinJonh >= 20 && dinJonh < 130) {
+	alert("Jonh deberia comparse el helado de crema de mani :)");
+	alert("Te sobrarian " + (dinJonh - 20));
+}
+else if (dinJonh >= 130 && dinJonh < 350) {
+	alert("Jonh deberia comparse el helado de fresa :D");
+	alert("Te sobrarian " + (dinJonh - 130));
+}
+else if (dinJonh >= 350 && dinJonh < 900) {
+	alert("Jonh deberia comparse el helado de vodka :D");
+	alert("Te sobrarian " + (dinJonh - 350));
+}
+else if (dinJonh >= 900 && dinJonh < 1000) {
+	alert("Jonh deberia comparse el helado arandanos con polvo de oro o un kilo de helado");
+	alert("Te sobrarian " + (dinJonh - 900));
+}
+else {
+	alert("Jonh, ¿de nuevo?, hoy salgo a las dos, esperame atras del basural y te dejo chuparmela a cambio del helado");
+}
+
+dinTailer = prompt("¿cuanto dinero tenes Tailer?");
+dinTailer = parseInt(dinTailer);
+
+if (dinTailer >= 5 && dinTailer < 20) {
+	alert("Tailer deberia comparse el helado de agua");
+	alert("Te sobrarian " + (dinTailer - 5));
+}
+else if (dinTailer >= 20 && dinTailer < 130) {
+	alert("Tailer deberia comparse el helado de crema de mani :)");
+	alert("Te sobrarian " + (dinTailer - 20));
+}
+else if (dinTailer >= 130 && dinTailer < 350) {
+	alert("Tailer deberia comparse el helado de fresa :D");
+	alert("Te sobrarian " + (dinTailer - 130));
+}
+else if (dinTailer >= 350 && dinTailer < 900) {
+	alert("Tailer deberia comparse el helado de vodka :D");
+	alert("Te sobrarian " + (dinTailer - 350));
+}
+else if (dinTailer >= 900 && dinTailer < 1000) {
+	alert("Tailer deberia comparse el helado arandanos con polvo de oro o un kilo de helado");
+	alert("Te sobrarian " + (dinTailer - 900));
+}
+else {
+	alert("Tailer, bienvenido, ¿como esta el presidente?, yo invito el helado :D");
+}
+
+
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<</> ARRAYS
+
+**en los arrays se pueden guardar muchos mas datos que en una variable convencional
+
+array = ["asi se crea un array",3000,"cosa","cosa2"]; 
+alert(array)
+
+
+let comida = ["azuca","agua","pan"]; 
+
+zucar = elemento numero 0 del array
+agua = elemento numero 1 del array
+pan = elemento numero 2 del array...
+
+document.write(comida[0])
+document.write(comida[1])
+document.write(comida[2]) --> para mostrar cada cosa
+
+
+
+**ARRAY ASOCIATIVO: Un arrai con un valor asociado, en lugar de que ese valor que se auto asigne con numeros (0,1,2,3,4,...) el valor se lo das y para obtener la informacion que contiene, tienes que que poner el nombre que le asignaste.
+
+
+**Un array asociativo es una estructura de datos que almacena pares de clave-valor, donde una clave única (que puede ser una cadena de texto) se utiliza para acceder a un valor. A diferencia de los arrays tradicionales que usan índices numéricos, los arrays asociativos permiten identificar cada elemento mediante una etiqueta significativa.
+
+
+
+let caja1 = {
+	cubo: "amarillo",
+	regla: "transparente",
+	palo: "marron",
+	angel: "rojo"
+}
+document.write(caja1["cubo"]); --> asociativo (acordate de las comillas, junto al cnombre inicial)
+
+
+
+let caja2 = ["amarillo","transparente","marron","rojo"];
+document.write(caja2[0]); --> no asociativo
+
+
+..........ejercicio:
+
+
+let caja1 = {
+	cubo: "amarillo",
+	regla: "transparente",
+	palo: "balnco",
+	angel: "rojo"
+}
+
+let cubo = caja1["cubo"]
+let regla = caja1["regla"]
+let palo = caja1["palo"]
+let angel = caja1["angel"]
+
+frase = `Se ve como un cubo un tanto ${cubo}, 
+		pero aveces pienso que es mas una regla, por ese color tan ${regla} <br>
+		el otro dia vi un angel que era ${angel}, no imaginaba que los angeles fueran asi, <br>
+		luego desperte y tenia un palo ${palo}, clabado en el cuello, ¿habras sido el angel?`
+
+document.write(frase);
+
+
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<</> BUCLES E ITERACCION
+
+
+
+
+**sentencia WHILE son similares a los if a diferencia de que crea un bucle con la condicion que se cumplio
+
+
+**_WHILE: crea bucles
+
+
+let num = 15;
+
+if (num < 19) { --> pregunta una vez
+	num++;
+	alert(num)
+}
+
+
+let num = 5;
+
+while (num < 10) { --> pregunta hasta que la condicion deja de cumplirse
+	num++;
+	alert(num)
+}
+*en este caso se cumple hasta el 10 y de ahi en adelante no avanza 
+let num = 5;
+
+while (num < 10) {
+	num++;
+	document.write(num);
+}
+
+
+let num = 0;
+while (num < 10) {
+	num++;
+	document.write(num + `<br>`); --> se puede hacer eso
+}
+
+
+
+
+**_sentencia DO WHILE: a diferencia del while que primero pregunta y ejecuta en un bucle, el do hace casi lo mismo pero primero ejecuta y si luego pregunta, si la condicion no se cumple mas habras ejecutado una vez y listo:
+
+
+let num = 0;
+
+do {
+	num++;
+	document.write(num + `<br>`);
+}
+while (num < 10) --> ejecucuin constante
+
+
+let num = 0;
+do {
+	num++;
+	document.write(num + `<br>`);
+}
+while (num > 10) --> se ejecuta solo una vez, porque la condiciion es false 
+
+
+
+
+**_sentencia FOR - FOR IN - FOR OF
+: 
+
+**FOR: similar al while, pero con la diferencia de que es un bucle determinado a diferencia de while que es indeterminao ya que no le indicamos la cantidad de veces que se ejecuta solo hasta que punto debe parar, pero en el for tenemos esa capacidad de ser mas especificos.
+
+*Al poner for en un .js te aparece lo siguiente:
+
+for (var i = Things.length - 1; i >= 0; i--) {
+	Things[i]
+}
+
+*for se compone de tres parates: la declaracion de variables, luego donde las inicializamos y por ultimo donde las iteramos (hacer lo mismo varias veces o  aumento ++ y decremento --).
+
+   	 	variable i = 3 --> declaracion
+for (	let i = 3;		 				i < 0; i--) {
+
+	Things[i]
+
+}
+
+   	 				se ejecuta mientras que i sea menor que 10 --> condicion o nicializacion
+for (let i = 3;		i < 10; 					i--) {
+
+	Things[i]
+	
+}
+
+   	 						si aunmenta o decrese --> iteracion
+for (let i = 3; i < 10; 	i++) {
+
+	Things[i]
+	
+}
+
+*dentro del for, la bariable se comporta como bloque, por eso el let es necesario, aunque no obligatorio. Pero afuera tambien se comporta como bloque aunque tenga un valor diferente, es posible declararlas tanto afuera como adentro del for, ya que aunque tengan valores diferentes se comportan como es debido en su respectivo bloque, aun sin compartir los mismo valores.
+
+let i = 0;
+
+for (let i = 3; i <= 10; i++) {
+	document.write(i + `<br>`);  --> muestra de 3 al 10 en vertical
+}
+
+*en el caso del DECREMENTO:
+
+let i = 0;
+
+for (let i = 3; i > 0; i--) {  
+	document.write(i + `<br>`);
+} 
+
+--> podemos ver que si la variable es el tres(u otro numero) y la condicion es que si i es menor a 0 y el decremento esta en negativo entonces los numero que se van a mostrar son del 3 al 1. Va decreciendo pero no llega a los numero negativos, si quisieramos que fueran a los numeros negativos tendriamos que hacer los siguiente:
+
+let i = 0;
+
+for (let i = 3; i >= -9; i--) { 
+	document.write(i + `<br>`); --> todo numero menor o igual a -9 figura en forma de columna
+}
+
+
+
+*-* FOR IN - FOR ON : Lo que te muestra for in es la posicion o el indice en la que esta cada elemnto, mientras que for of nos muestra el valor de cada elemento:
+
+
+*un ejemplo para iluminarte :D :
+
+let gust = ["helado","pizza","agua","nadar"];
+
+for (gus in gust) {
+	document.write(gus + `<br>`);
+}
+
+document.write(`<br>`);
+
+for (gus of gust) {
+	document.write(gus + `<br>`);
+}
+
+*en el rpimer lugar por parte de for in tenemos:
+
+0  --> posicion cero
+1  --> posicion uno 
+2  --> ...
+3  --> hasta la sposicion tres
+
+*si quisieramos que for in muestre la misma lista de cosas que for on, tendriamos que poner:
+
+
+let gust = ["helado","pizza","agua","nadar"];
+
+for (gus in gust) {
+	document.write(gust[gus] + `<br>`);  --> que muestre los datos de gust alojados en gus
+}
+
+*ya que debemos recordar que in nos muestra la posicion de los elementos y on el valor de dichos elementos
+
+
+
+
+**_sentencia BREAK: se usa para evitar que while se ejecute hasta el infinito, finaliza los bucles
+
+
+let num = 0;
+
+while(num < 100) {
+	num++;
+	document.write(num);
+	if (num == 15) {
+		break;  ----> hace que de 100, se ejecute hasta 15 veces
+	}
+}
+
+    variable i = 3
+for (let i = 3; i >= 0; i--) {
+	Things[i]
+}
+
+
+
+
+
+**_sentencia LABEL: Una sentencia que nos permite asociar un bucle (a exepcion de for ich) a un nombre para poder terminarlo cuando querramos: 3:00:00
+
+
+
+
+**_sentencia CONTINUE: 
+
+*en el siguiente ejemplo el for te muestra todos los numeros del 0 al 10
+
+for (let i = 0; i <= 10; i++) {
+	document.write(i + `<br>`);
+}
+*en un caso hipotetico, si quisieramos hacer que el 10 no apresca podriamos simplemente ponerle un if adentro
+
+for (let i = 0; i < 10; i++) {
+	if (i == 10) {
+		break;
+	}
+	document.write(i + `<br>`);
+}
+
+*pero si quisieramos desaparecer un numero con el 8 tendriamos que usar continue
+
+for (let i = 0; i <= 10; i++) {
+	if (i == 8) {
+		continue;  
+	}
+	document.write(i + `<br>`);
+}
+
+--> de esta manera muestra todo menos el 8, pero a diferencia del break, no para el proceso y continua con los numeros que le siguen
+
+
+for (let i = 0; i <= 10; i++) {
+	if (i == 0) {
+		continue;
+	}
+	if (i == 8) {
+		continue;
+	}
+	document.write(i + ` te amo <br>`);
+}
+
+
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<</> FUNCIONES
+
+**_
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<</> NOTAS
+
+**siempre poner (;) al final de cada linea
+
+**los bacfits se ponen apletando alt la tecla adelante de la p (sueltas alt) y enter `` 
+
+**se deja apartado con //codigo que no quisiste borrar, es una forma de poner notas o simplemente guardar esos fragmentos de codigo
+
+**se pueden poner las variables juntas y separadas, ej:
+Let n1 = "hola", n2 = 2;
+Let n1 = "hola";
+Let n2 = 2;
